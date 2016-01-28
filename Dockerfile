@@ -2,10 +2,10 @@ FROM ubuntu
 MAINTAINER Alexandre Hamelin <alexandre.hamelin gmail.com>
 LABEL copyright="Copyright (c) 2016, Alexandre Hamelin <alexandre.hamelin gmail.com>"
 
-RUN locale-gen en_US.UTF_8
-ENV LANG en_US.UTF_8
-ENV LANGUAGE en_US.UTF_8
-ENV LC_ALL en_US.UTF_8
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
 RUN apt-get update && apt-get install -y git curl libgmp-dev && \
     curl -sSL https://rvm.io/mpapis.asc | gpg --import - && \
     curl -k -sSL https://raw.githubusercontent.com/wayneeseguin/rvm/master/binscripts/rvm-installer | bash -s stable && \
